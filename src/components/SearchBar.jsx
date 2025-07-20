@@ -18,7 +18,7 @@ const SearchBar = ({ onLocationChange }) => {
     setError(null);
     
     try {
-      const apiKey = 'ad46b945066976ff4dd159b190c0e212'; // Same key as weather API
+      const apiKey = import.meta.env.VITE_OPENWEATHER_API_KEY; // Same key as weather API
       const response = await axios.get(
         `https://api.openweathermap.org/geo/1.0/direct?q=${searchTerm}&limit=5&appid=${apiKey}`
       );

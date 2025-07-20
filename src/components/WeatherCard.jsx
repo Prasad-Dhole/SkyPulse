@@ -11,7 +11,7 @@ const WeatherCard = ({ location, unit }) => {
     const fetchWeather = async () => {
       try {
         setLoading(true);
-        const apiKey = 'ad46b945066976ff4dd159b190c0e212'; // Replace with your key
+        const apiKey = import.meta.env.VITE_OPENWEATHER_API_KEY; // Replace with your key
         const response = await axios.get(
           `https://api.openweathermap.org/data/2.5/weather?lat=${location.lat}&lon=${location.lon}&units=${unit}&appid=${apiKey}`
         );
