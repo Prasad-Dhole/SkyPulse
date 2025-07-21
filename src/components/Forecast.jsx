@@ -1,18 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { WiDaySunny, WiRain, WiCloudy, WiSnow } from 'react-icons/wi';
 import axios from 'axios';
+import { API_KEY } from '../utils/config';
+import useWeather from '../hooks/useWeather';
 
 const Forecast = ({ location, unit }) => {
-  const [forecast, setForecast] = useState([]);
+  const { forecast } = useWeather(location, unit);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchForecast = async () => {
       try {
         setLoading(true);
-        const apiKey = import.meta.env.VITE_OPENWEATHER_API_KEY; // Replace with your key
         const response = await axios.get(
-          `https://api.openweathermap.org/data/2.5/forecast?lat=${location.lat}&lon=${location.lon}&units=${unit}&appid=${apiKey}`
+          `https://api.openweathermap.org/data/2.5/forecast?lat=${location.lat}&lon=${location.lon}&units=${unit}&appid=${API_KEY}`
         );
         
         // Filter to one forecast per day

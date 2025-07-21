@@ -1,32 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { WiDaySunny, WiRain, WiCloudy, WiSnow, WiThunderstorm } from 'react-icons/wi';
 import axios from 'axios';
+import { API_KEY } from '../utils/config';
+import useWeather from '../hooks/useWeather';
 
 const WeatherCard = ({ location, unit }) => {
-  const [weather, setWeather] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    const fetchWeather = async () => {
-      try {
-        setLoading(true);
-        const apiKey = import.meta.env.VITE_OPENWEATHER_API_KEY; // Replace with your key
-        const response = await axios.get(
-          `https://api.openweathermap.org/data/2.5/weather?lat=${location.lat}&lon=${location.lon}&units=${unit}&appid=${apiKey}`
-        );
-        setWeather(response.data);
-        setError(null);
-      } catch (err) {
-        console.error('Error fetching weather:', err);
-        setError('Failed to load weather data');
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchWeather();
-  }, [location, unit]);
+  const { weather, loading, error } = useWeather(location, unit);
 
   const getWeatherIcon = () => {
     if (!weather) return null;

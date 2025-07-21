@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import maplibregl from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
 
+
 const Map = ({ location, setLocation }) => {
   const mapContainer = useRef(null);
   const map = useRef(null);

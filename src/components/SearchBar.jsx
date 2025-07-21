@@ -1,47 +1,20 @@
 import React, { useState } from 'react';
 import { FaSearch, FaTimes } from 'react-icons/fa';
-import axios from 'axios';
+import useLocationSearch from '../hooks/useLocationSearch';
 
 const SearchBar = ({ onLocationChange }) => {
   const [query, setQuery] = useState('');
-  const [suggestions, setSuggestions] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
+  const { 
+    suggestions, 
+    loading, 
+    error, 
+    handleSearch, 
+    setSuggestions 
+  } = useLocationSearch();
 
-  const searchCities = async (searchTerm) => {
-    if (!searchTerm.trim()) {
-      setSuggestions([]);
-      return;
-    }
-    
-    setLoading(true);
-    setError(null);
-    
-    try {
-      const apiKey = import.meta.env.VITE_OPENWEATHER_API_KEY; // Same key as weather API
-      const response = await axios.get(
-        `https://api.openweathermap.org/geo/1.0/direct?q=${searchTerm}&limit=5&appid=${apiKey}`
-      );
-      
-      setSuggestions(response.data.map(city => ({
-        name: city.name,
-        country: city.country,
-        lat: city.lat,
-        lon: city.lon
-      })));
-    } catch (err) {
-      console.error('Geocoding API error:', err);
-      setError('Failed to search cities');
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const handleSearch = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    if (query.trim()) {
-      searchCities(query);
-    }
+    handleSearch(query);
   };
 
   const handleSelect = (city) => {
@@ -56,7 +29,7 @@ const SearchBar = ({ onLocationChange }) => {
 
   return (
     <div className="relative w-full">
-      <form onSubmit={handleSearch} className="flex">
+      <form onSubmit={handleSubmit} className="flex">
         <input
           type="text"
           value={query}
@@ -72,12 +45,10 @@ const SearchBar = ({ onLocationChange }) => {
         </button>
       </form>
 
-      {/* Error message */}
       {error && (
         <div className="text-red-500 text-sm mt-1">{error}</div>
       )}
 
-      {/* Suggestions dropdown */}
       {suggestions.length > 0 && (
         <div className="absolute z-10 w-full bg-white border border-gray-200 rounded-lg shadow-lg mt-1 max-h-60 overflow-y-auto">
           {suggestions.map((city, index) => (
@@ -104,7 +75,6 @@ const SearchBar = ({ onLocationChange }) => {
         </div>
       )}
 
-      {/* Loading indicator */}
       {loading && (
         <div className="absolute top-3 right-14">
           <div className="animate-spin rounded-full h-4 w-4 border-t-2 border-b-2 border-weather-primary"></div>

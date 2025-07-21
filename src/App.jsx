@@ -36,8 +36,9 @@ function App() {
                 <UnitToggle unit={unit} setUnit={setUnit} />
               </div>
               <Map location={location} setLocation={setLocation} />
-            </div>
-            <Forecast location={location} unit={unit} />
+            </div>  
+              <Forecast location={location} unit={unit} />
+            
           </div>
           
           {/* Right Column - Current Weather */}
