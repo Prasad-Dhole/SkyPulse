@@ -38,10 +38,9 @@ A modern weather application providing real-time forecasts with interactive maps
 2. Install Dependencies :
    ```npm install
 
-3. Create .env file:
-   ```VITE_OPENWEATHER_API_KEY=your_api_key_here
+3. Create .env file: VITE_OPENWEATHER_API_KEY=your_api_key_here
 
-2. Start the development server :
+4. Start the development server :
    ```npm run dev
 
 📂 Project Structure
@@ -49,10 +48,15 @@ A modern weather application providing real-time forecasts with interactive maps
 skypulse-app/
 
 ├── src/
+
 │   ├── components/       # Reusable components
+
 │   ├── hooks/            # Custom React hooks
+
 │   ├── utils/            # Utility functions
+
 │   ├── App.jsx           # Main application
+
 │   └── main.jsx          # Entry point
 
 ├── public/               # Static assets
