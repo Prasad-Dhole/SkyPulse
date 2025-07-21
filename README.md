@@ -34,13 +34,15 @@ A modern weather application providing real-time forecasts with interactive maps
    git clone https://github.com/your-username/skypulse-app.git
    cd skypulse-app
 
-2. install Dependencies: npm install
 
-3. Create .env file: 
-VITE_OPENWEATHER_API_KEY=your_api_key_here
+2. Install Dependencies :
+   ```npm install
 
-4. Start the development server: npm run dev
+3. Create .env file:
+   ```VITE_OPENWEATHER_API_KEY=your_api_key_here
 
+2. Start the development server :
+   ```npm run dev
 
 📂 Project Structure
 skypulse-app/
