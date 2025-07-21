@@ -45,6 +45,7 @@ A modern weather application providing real-time forecasts with interactive maps
    ```npm run dev
 
 📂 Project Structure
+
 skypulse-app/
 ├── src/
 │   ├── components/       # Reusable components
@@ -56,15 +57,18 @@ skypulse-app/
 └── vite.config.js        # Vite configuration
 
 🌐 API Integration
+
 The app uses:
 OpenWeatherMap Current Weather API
 OpenWeatherMap 5-Day Forecast API
 OpenWeatherMap Geocoding API
 
 📝 License
+
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 🙏 Acknowledgments
+
 OpenWeatherMap for their excellent weather API
 MapLibre for open-source mapping
 Vite team for the amazing build tool
