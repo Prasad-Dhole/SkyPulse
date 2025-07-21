@@ -1,12 +1,68 @@
-# React + Vite
+# 🌤️ SkyPulse - Interactive Weather Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Project Screenshot](./public/Screenshot1.png ./public/Screenshot2.png ) <!-- Add your screenshot here -->
 
-Currently, two official plugins are available:
+A modern weather application providing real-time forecasts with interactive maps. Built with React, Vite, and Tailwind CSS.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+- 🌍 Location-based weather data
+- 📊 5-day weather forecast
+- 🗺️ Interactive map for location selection
+- 🌡️ Celsius/Fahrenheit toggle
+- 📱 Fully responsive design
+- 🚀 Fast API integration with OpenWeatherMap
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Technologies Used
+
+- **Frontend**: React 18 + Vite
+- **Styling**: Tailwind CSS
+- **Maps**: MapLibre GL JS
+- **Icons**: React Icons (Weather Icons)
+- **API**: OpenWeatherMap
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js (v16 or higher)
+- npm (v8 or higher)
+- OpenWeatherMap API key
+
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/skypulse-app.git
+   cd skypulse-app
+
+2. install Dependencies: npm install
+
+3. Create .env file: 
+VITE_OPENWEATHER_API_KEY=your_api_key_here
+
+4. Start the development server: npm run dev
+
+
+📂 Project Structure
+skypulse-app/
+├── src/
+│   ├── components/       # Reusable components
+│   ├── hooks/            # Custom React hooks
+│   ├── utils/            # Utility functions
+│   ├── App.jsx           # Main application
+│   └── main.jsx          # Entry point
+├── public/               # Static assets
+└── vite.config.js        # Vite configuration
+
+🌐 API Integration
+The app uses:
+OpenWeatherMap Current Weather API
+OpenWeatherMap 5-Day Forecast API
+OpenWeatherMap Geocoding API
+
+📝 License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+🙏 Acknowledgments
+OpenWeatherMap for their excellent weather API
+MapLibre for open-source mapping
+Vite team for the amazing build tool
