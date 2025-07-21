@@ -54,7 +54,9 @@ skypulse-app/
 │   ├── utils/            # Utility functions
 │   ├── App.jsx           # Main application
 │   └── main.jsx          # Entry point
+
 ├── public/               # Static assets
+
 └── vite.config.js        # Vite configuration
 
 🌐 API Integration
