@@ -47,13 +47,21 @@ A modern weather application providing real-time forecasts with interactive maps
 📂 Project Structure
 
 skypulse-app/
+
 ├── src/
+
 │   ├── components/       # Reusable components
+
 │   ├── hooks/            # Custom React hooks
+
 │   ├── utils/            # Utility functions
+
 │   ├── App.jsx           # Main application
+
 │   └── main.jsx          # Entry point
+
 ├── public/               # Static assets
+
 └── vite.config.js        # Vite configuration
 
 🌐 API Integration
