@@ -1,6 +1,7 @@
 # 🌤️ SkyPulse - Interactive Weather Dashboard
 
-![Project Screenshot](./public/Screenshot1.png ./public/Screenshot2.png ) <!-- Add your screenshot here -->
+![Project Screenshot](./public/Screenshot1.png ) 
+![Project Screenshot](./public/Screenshot2.png ) 
 
 A modern weather application providing real-time forecasts with interactive maps. Built with React, Vite, and Tailwind CSS.
 
@@ -35,15 +36,18 @@ A modern weather application providing real-time forecasts with interactive maps
    cd skypulse-app
 
 
-2. Install Dependencies :
-   ```npm install
+2. Install Dependencies : 
+   ```bash
+   npm install
 
 3. Create .env file: VITE_OPENWEATHER_API_KEY=your_api_key_here
 
-4. Start the development server :
-   ```npm run dev
+4. Start the development server : 
+   ```bash
+   npm run dev
 
-📂 Project Structure
+
+### 📂 Project Structure
 
 skypulse-app/
 
@@ -63,19 +67,22 @@ skypulse-app/
 
 └── vite.config.js        # Vite configuration
 
-🌐 API Integration
+
+### 🌐 API Integration
 
 The app uses:
+
 OpenWeatherMap Current Weather API
+
 OpenWeatherMap 5-Day Forecast API
+
 OpenWeatherMap Geocoding API
 
-📝 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-🙏 Acknowledgments
+### 🙏 Acknowledgments
 
 OpenWeatherMap for their excellent weather API
+
 MapLibre for open-source mapping
+
 Vite team for the amazing build tool
