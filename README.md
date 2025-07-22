@@ -32,7 +32,7 @@ A modern weather application providing real-time forecasts with interactive maps
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/skypulse-app.git
+   git clone https://github.com/prasad-dhole/skypulse-app.git
    cd skypulse-app
 
 
@@ -40,7 +40,9 @@ A modern weather application providing real-time forecasts with interactive maps
    ```bash
    npm install
 
-3. Create .env file: VITE_OPENWEATHER_API_KEY=your_api_key_here
+3. Create .env file:  Inside .env -->
+   ```bash
+   VITE_OPENWEATHER_API_KEY=your_api_key_here
 
 4. Start the development server : 
    ```bash
